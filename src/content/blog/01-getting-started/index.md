@@ -4,6 +4,9 @@ description: "Hit the ground running."
 date: "Mar 22 2024"
 ---
 
+![Alt text for the image](./my-image.jpg)
+
+
 The basic configuration of Nano is pretty simple.
 
 Edit `src/consts.ts`
@@ -53,12 +56,8 @@ Customize your social media
 
 export const SOCIALS: Socials = [
   { 
-    NAME: "twitter-x",
-    HREF: "https://twitter.com/markhorn_dev",
-  },
-  { 
     NAME: "github",
-    HREF: "https://github.com/markhorn-dev"
+    HREF: "https://github.com/tengdu"
   },
   { 
     NAME: "linkedin",
