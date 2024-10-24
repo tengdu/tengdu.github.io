@@ -5,6 +5,6 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://tengdu.github.io",
+  site: "https://tengdu.me",
   integrations: [mdx(), sitemap(), tailwind()],
 });
