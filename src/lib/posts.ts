@@ -16,8 +16,10 @@ export function getAllPosts(): PostMeta[] {
     return {
       slug,
       title: data.title as string,
+      titleEn: data.titleEn as string | undefined,
       date: data.date as string,
       description: data.description as string,
+      descriptionEn: data.descriptionEn as string | undefined,
       tags: data.tags as string[] | undefined,
       coverImage: data.coverImage as string | undefined,
     };
@@ -26,6 +28,16 @@ export function getAllPosts(): PostMeta[] {
   return posts.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
+}
+
+export function getAllTags(): string[] {
+  const posts = getAllPosts();
+  const tags = new Set(posts.flatMap((p) => p.tags ?? []));
+  return Array.from(tags).sort();
+}
+
+export function getPostsByTag(tag: string): PostMeta[] {
+  return getAllPosts().filter((p) => p.tags?.includes(tag));
 }
 
 export function getPostBySlug(slug: string): PostWithContent {
@@ -37,8 +49,10 @@ export function getPostBySlug(slug: string): PostWithContent {
   return {
     slug,
     title: data.title as string,
+    titleEn: data.titleEn as string | undefined,
     date: data.date as string,
     description: data.description as string,
+    descriptionEn: data.descriptionEn as string | undefined,
     tags: data.tags as string[] | undefined,
     coverImage: data.coverImage as string | undefined,
     content,

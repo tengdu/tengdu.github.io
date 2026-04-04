@@ -1,6 +1,19 @@
 export default function Prose({ children }: { children: React.ReactNode }) {
   return (
-    <div className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-800 prose-img:rounded-xl">
+    <div className="prose max-w-none prose-headings:font-semibold prose-img:rounded-xl"
+      style={{
+        "--tw-prose-body": "var(--foreground)",
+        "--tw-prose-headings": "var(--foreground)",
+        "--tw-prose-links": "var(--accent)",
+        "--tw-prose-bold": "var(--foreground)",
+        "--tw-prose-counters": "var(--muted)",
+        "--tw-prose-bullets": "var(--muted)",
+        "--tw-prose-quotes": "var(--foreground)",
+        "--tw-prose-quote-borders": "var(--border)",
+        "--tw-prose-code": "var(--foreground)",
+        "--tw-prose-pre-bg": "var(--card)",
+      } as React.CSSProperties}
+    >
       {children}
     </div>
   );

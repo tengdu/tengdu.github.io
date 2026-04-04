@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,19 +31,18 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col text-[#1c1917] dark:text-[#ede8e3]">
-        <header className="border-b border-neutral-200 dark:border-neutral-800">
-          <div className="max-w-2xl mx-auto px-4 py-5 flex items-center justify-between">
-            <a href="/" className="text-lg font-semibold tracking-tight">
-              tengdu.me
-            </a>
-          </div>
-        </header>
-        <main className="flex-1">{children}</main>
-        <footer className="border-t border-neutral-200 dark:border-neutral-800 mt-16">
-          <div className="max-w-2xl mx-auto px-4 py-6 text-sm text-neutral-500">
-            © {new Date().getFullYear()} tengdu.me
-          </div>
-        </footer>
+        <LanguageProvider>
+          <header className="border-b" style={{ borderColor: "var(--border)" }}>
+            <div className="max-w-4xl mx-auto px-4 py-5 flex items-center justify-between">
+              <a href="/" className="text-lg font-semibold tracking-tight" style={{ color: "var(--accent)" }}>
+                tengdu.me
+              </a>
+              <LanguageSwitcher />
+            </div>
+          </header>
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

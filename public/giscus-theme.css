@@ -1,0 +1,61 @@
+/* Light mode */
+:root {
+  --color-canvas-default: #fdf6e3;
+  --color-canvas-subtle: #f7edd4;
+  --color-canvas-inset: #ede0c8;
+  --color-border-default: #d9c9b0;
+  --color-border-muted: #e4d4b8;
+  --color-fg-default: #2c1e0f;
+  --color-fg-muted: #8a7060;
+  --color-fg-subtle: #a08070;
+  --color-accent-fg: #b5651d;
+  --color-accent-emphasis: #b5651d;
+  --color-btn-bg: #f7edd4;
+  --color-btn-border: #d9c9b0;
+  --color-btn-hover-bg: #ede0c8;
+  --color-btn-text: #2c1e0f;
+  --color-btn-primary-bg: #b5651d;
+  --color-btn-primary-border: #a05818;
+  --color-btn-primary-text: #fdf6e3;
+  --color-btn-primary-hover-bg: #a05818;
+  --color-neutral-muted: rgba(217, 201, 176, 0.4);
+  --color-social-reaction-bg-hover: #ede0c8;
+  --color-social-reaction-bg-reacted-hover: #ede0c8;
+  --color-scale-gray-1: #f7edd4;
+  --color-scale-gray-2: #ede0c8;
+  --color-prettylights-syntax-comment: #8a7060;
+  --color-prettylights-syntax-constant: #b5651d;
+  --color-prettylights-syntax-string: #6b8f47;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-canvas-default: #211a14;
+    --color-canvas-subtle: #2a2018;
+    --color-canvas-inset: #1a1208;
+    --color-border-default: #3d2e20;
+    --color-border-muted: #332518;
+    --color-fg-default: #e8d5b7;
+    --color-fg-muted: #9a8070;
+    --color-fg-subtle: #7a6050;
+    --color-accent-fg: #d4956a;
+    --color-accent-emphasis: #d4956a;
+    --color-btn-bg: #2a2018;
+    --color-btn-border: #3d2e20;
+    --color-btn-hover-bg: #3a2d1e;
+    --color-btn-text: #e8d5b7;
+    --color-btn-primary-bg: #d4956a;
+    --color-btn-primary-border: #c4855a;
+    --color-btn-primary-text: #211a14;
+    --color-btn-primary-hover-bg: #c4855a;
+    --color-neutral-muted: rgba(61, 46, 32, 0.5);
+    --color-social-reaction-bg-hover: #3a2d1e;
+    --color-social-reaction-bg-reacted-hover: #3a2d1e;
+    --color-scale-gray-1: #2a2018;
+    --color-scale-gray-2: #3a2d1e;
+    --color-prettylights-syntax-comment: #9a8070;
+    --color-prettylights-syntax-constant: #d4956a;
+    --color-prettylights-syntax-string: #8ab467;
+  }
+}

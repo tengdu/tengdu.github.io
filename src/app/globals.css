@@ -2,8 +2,14 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #fbbf24;
-  --foreground: #1c1917;
+  --background: #fdf6e3;
+  --foreground: #2c1e0f;
+  --muted: #8a7060;
+  --border: #d9c9b0;
+  --card: #f7edd4;
+  --tag-bg: #ede0c8;
+  --tag-text: #6b4f2e;
+  --accent: #b5651d;
 }
 
 @theme inline {
@@ -15,8 +21,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1a1714;
-    --foreground: #ede8e3;
+    --background: #211a14;
+    --foreground: #e8d5b7;
+    --muted: #9a8070;
+    --border: #3d2e20;
+    --card: #2a2018;
+    --tag-bg: #3a2d1e;
+    --tag-text: #c4a882;
+    --accent: #d4956a;
   }
 }
 
