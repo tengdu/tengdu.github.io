@@ -51,7 +51,7 @@ export default function FlightMap({ flights = [] }: Props) {
 
       const size = el.clientWidth;
 
-      Globe({ animateIn: true })(el)
+      new Globe(el, { animateIn: true })
         .width(size)
         .height(size)
         .globeImageUrl("//unpkg.com/three-globe/example/img/earth-night.jpg")
